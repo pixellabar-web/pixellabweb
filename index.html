@@ -1,0 +1,391 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap" rel="stylesheet" />
+
+<style>
+.pl-hero {
+  background: #1A1A1A;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px 48px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.pl-hero-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #3D4F35 !important;
+  margin-bottom: 24px;
+  display: block;
+}
+.pl-hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: #FFFFFF !important;
+  margin-bottom: 40px;
+}
+.pl-hero-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(255,255,255,0.3) !important;
+}
+.pl-hero-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6) !important;
+  max-width: 460px;
+  line-height: 1.7;
+  border-left: 2px solid #3D4F35;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.pl-statement {
+  background: #FFFFFF;
+  padding: 80px 48px;
+  box-sizing: border-box;
+}
+.pl-statement-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.pl-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #6B6B6B !important;
+  margin-bottom: 28px;
+  display: block;
+}
+.pl-statement-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #1A1A1A !important;
+  margin: 0;
+}
+.pl-statement-text span {
+  color: #A0604A !important;
+}
+
+.pl-founders {
+  padding: 80px 48px;
+  background: #F4F2EF;
+  box-sizing: border-box;
+}
+.pl-founders-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.pl-founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+.pl-founder-card {
+  background: #FFFFFF;
+  padding: 40px 36px;
+  position: relative;
+  box-sizing: border-box;
+}
+.pl-founder-card-facu {
+  border-top: 3px solid #3D4F35;
+}
+.pl-founder-card-joni {
+  border-top: 3px solid #3D6478;
+}
+.pl-founder-photo {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  background: #E8E6E2;
+}
+.pl-founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.pl-founder-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: rgba(0,0,0,0.05) !important;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: -16px;
+}
+.pl-founder-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #1A1A1A !important;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+.pl-founder-role-facu {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #3D4F35 !important;
+  margin-bottom: 20px;
+  display: block;
+}
+.pl-founder-role-joni {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #3D6478 !important;
+  margin-bottom: 20px;
+  display: block;
+}
+.pl-founder-bio {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2E2E2E !important;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.pl-story {
+  background: #1A1A1A;
+  padding: 80px 48px;
+  box-sizing: border-box;
+}
+.pl-story-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+.pl-story-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #FFFFFF !important;
+  margin-top: 24px;
+}
+.pl-story-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(255,255,255,0.3) !important;
+  display: block;
+}
+.pl-story-right p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.75) !important;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+.pl-story-right p strong {
+  font-weight: 700;
+  color: #FFFFFF !important;
+}
+.pl-story-right p:last-child { margin-bottom: 0; }
+
+.pl-values {
+  background: #F4F2EF;
+  padding: 80px 48px;
+  box-sizing: border-box;
+}
+.pl-values-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.pl-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+.pl-value-item {
+  background: #FFFFFF;
+  padding: 36px 28px;
+  box-sizing: border-box;
+}
+.pl-value-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #6B6B6B !important;
+  margin-bottom: 16px;
+  display: block;
+}
+.pl-value-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #1A1A1A !important;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.pl-value-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6B6B6B !important;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.pl-cierre {
+  background: #3D4F35;
+  padding: 80px 48px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.pl-cierre-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #FFFFFF !important;
+  margin-bottom: 12px;
+}
+.pl-cierre-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6) !important;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .pl-hero { padding: 40px 24px; min-height: 70vh; }
+  .pl-hero-title { font-size: 48px; }
+  .pl-statement { padding: 60px 24px; }
+  .pl-statement-text { font-size: 22px; }
+  .pl-founders { padding: 60px 24px; }
+  .pl-founders-grid { grid-template-columns: 1fr; }
+  .pl-story { padding: 60px 24px; }
+  .pl-story-inner { grid-template-columns: 1fr; gap: 32px; }
+  .pl-story-title { font-size: 36px; }
+  .pl-values { padding: 60px 24px; }
+  .pl-values-grid { grid-template-columns: 1fr; }
+  .pl-cierre { padding: 60px 24px; }
+  .pl-cierre-text { font-size: 24px; }
+}
+</style>
+
+<!-- HERO -->
+<div class="pl-hero">
+  <span class="pl-hero-eyebrow">pixellab.ar — Buenos Aires, Argentina</span>
+  <div class="pl-hero-title">Quiénes<br><em>somos.</em></div>
+  <p class="pl-hero-tagline">Dos creativos. Una obsesión en común.<br>Que el buen diseño argentino llegue a más casas.</p>
+</div>
+
+<!-- STATEMENT -->
+<div class="pl-statement">
+  <div class="pl-statement-inner">
+    <span class="pl-label">Nuestra razón de ser</span>
+    <p class="pl-statement-text">
+      No somos una gran marca ni queremos serlo.
+      Somos dos personas que diseñan, fabrican y envían
+      cada objeto con la convicción de que la gente merece
+      tener <span>cosas lindas en su casa.</span>
+    </p>
+  </div>
+</div>
+
+<!-- FOUNDERS -->
+<div class="pl-founders">
+  <div class="pl-founders-inner">
+    <span class="pl-label">Las personas detrás de pixellab</span>
+    <div class="pl-founders-grid">
+
+      <div class="pl-founder-card pl-founder-card-facu">
+        <div class="pl-founder-photo">
+          <img src="https://i.imgur.com/IVFKt9B.jpeg" alt="Facu — pixellab" />
+        </div>
+        <div class="pl-founder-number">01</div>
+        <h2 class="pl-founder-name">Facu</h2>
+        <span class="pl-founder-role-facu">Co-Founder · Diseño & Fabricación</span>
+        <p class="pl-founder-bio">Diseñador gráfico, cadista y modelador 3D. La mente detrás de cada forma, cada curva y cada decisión de material. Facu convierte ideas en objetos reales con precisión técnica y criterio estético. Si existe en pixellab, primero existió en su cabeza y en su pantalla.</p>
+      </div>
+
+      <div class="pl-founder-card pl-founder-card-joni">
+        <div class="pl-founder-photo">
+          <img src="https://i.imgur.com/xyCrvbd.jpeg" alt="Joni — pixellab" />
+        </div>
+        <div class="pl-founder-number">02</div>
+        <h2 class="pl-founder-name">Joni</h2>
+        <span class="pl-founder-role-joni">Co-Founder · Comercio & Contenido</span>
+        <p class="pl-founder-bio">Digital Commerce Manager con foco en IA aplicada a contenido, ventas y operaciones. Joni se encarga de que pixellab llegue cada vez más lejos. Desde la tienda hasta las redes, cada palabra y cada imagen tienen su impronta. El puente entre el objeto y la persona que lo va a amar.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- STORY -->
+<div class="pl-story">
+  <div class="pl-story-inner">
+    <div class="pl-story-left">
+      <span class="pl-label" style="color:#3D4F35 !important;">Cómo nació todo</span>
+      <div class="pl-story-title">La<br>historia<br><em>real.</em></div>
+    </div>
+    <div class="pl-story-right">
+      <p><strong>pixellab nació de la unión de dos creativos</strong> con una obsesión en común: darle una vuelta de rosca al diseño 3D y demostrar que en Argentina se pueden hacer objetos con identidad real, a precios que no excluyen.</p>
+      <p>Facu traía la habilidad técnica y el ojo para el diseño. Joni traía la visión comercial y el manejo de las herramientas digitales. Juntos encontraron en la impresión 3D algo más que una tecnología: <strong>una forma de fabricar objetos que realmente valgan la pena.</strong></p>
+      <p>No queríamos hacer lo mismo que ya existía. Queríamos explorar, experimentar y encontrar combinaciones de materiales y formas que tuvieran carácter propio. Madera con PLA. Concreto con diseño. Ingeniería con estética.</p>
+      <p>Hoy pixellab es una familia de productos diseñados y fabricados a mano en Buenos Aires, pensada para la gente que quiere su espacio bien resuelto sin pagar precio de galería. <strong>Cosas lindas, hechas acá, con una historia real detrás.</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- VALUES -->
+<div class="pl-values">
+  <div class="pl-values-inner">
+    <span class="pl-label">Lo que nos define</span>
+    <div class="pl-values-grid">
+      <div class="pl-value-item">
+        <span class="pl-value-number">01</span>
+        <h3 class="pl-value-title">Diseño propio</h3>
+        <p class="pl-value-text">Cada objeto es nuestro. No revendemos ni copiamos. Cada forma nació en nuestra cabeza y salió de nuestra impresora.</p>
+      </div>
+      <div class="pl-value-item">
+        <span class="pl-value-number">02</span>
+        <h3 class="pl-value-title">Fabricación honesta</h3>
+        <p class="pl-value-text">Sabés exactamente qué comprás, con qué materiales y por qué cada decisión de diseño existe. Sin letra chica.</p>
+      </div>
+      <div class="pl-value-item">
+        <span class="pl-value-number">03</span>
+        <h3 class="pl-value-title">Buenos Aires</h3>
+        <p class="pl-value-text">Cada pieza se diseña, fabrica y envía desde acá. No es un slogan. Es la única forma en que trabajamos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CIERRE -->
+<div class="pl-cierre">
+  <p class="pl-cierre-text">pixellab. Objetos con carácter. 🖤</p>
+  <p class="pl-cierre-sub">pixellab.ar — Buenos Aires, Argentina</p>
+</div>
