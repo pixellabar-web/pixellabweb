@@ -103,10 +103,10 @@ y0 = 220
 LH = 178   # line-height
 
 draw.text((M, y0),        "UNA",        font=f_blk, fill=WHITE)
-draw.text((M, y0+LH),     "LUZ",        font=f_blk, fill=WHITE)
+draw.text((M, y0+LH),     "LÁMPARA",    font=f_blk, fill=WHITE)
 draw.text((M, y0+LH*2),   "PARA",       font=f_lgt, fill=WHITE_DIM)
 draw.text((M, y0+LH*3),   "CADA",       font=f_lgt, fill=WHITE_DIM)
-draw.text((M, y0+LH*4),   "AMBIENTE.",  font=f_blk, fill=WHITE)
+draw.text((M, y0+LH*4),   "HISTORIA.",  font=f_blk, fill=WHITE)
 
 # — VERTICAL RULE + TAGLINE —
 ty = y0 + LH*5 + 20    # ≈ 1130
@@ -118,7 +118,7 @@ draw.text((M+20, ty+46), "Diseñadas y fabricadas en Argentina.", font=f_tag, fi
 
 # — GLOW LABEL (floats near the light source) —
 f_glo = font("Montserrat-Light-static.ttf", 20)
-draw.text((M, GY - 80), "una luz.", font=f_glo, fill=(220, 168, 80, 90))
+draw.text((M, GY - 80), "una lámpara.", font=f_glo, fill=(220, 168, 80, 90))
 
 # — CTA (placeholder — reemplazar cuando el usuario confirme) —
 f_cta  = font("Montserrat-Bold-static.ttf", 26)
