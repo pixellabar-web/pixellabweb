@@ -1,0 +1,6 @@
+node_modules/
+assets/fonts/*.woff2
+assets/fonts/*-Variable.ttf
+assets/fonts/*-Italic-Variable.ttf
+assets/ig-screenshot.png
+package-lock.json
