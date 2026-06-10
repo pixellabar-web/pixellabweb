@@ -8,8 +8,12 @@ os.makedirs(OUT, exist_ok=True)
 
 # ── helpers ──────────────────────────────────────────────────────────────────
 
+FONT_CACHE = {}
 def f(name, size):
-    return ImageFont.truetype(os.path.join(FONT_DIR, name), size)
+    key = (name, size)
+    if key not in FONT_CACHE:
+        FONT_CACHE[key] = ImageFont.truetype(os.path.join(FONT_DIR, name), size)
+    return FONT_CACHE[key]
 
 def spaced(draw, pos, text, fnt, fill, sp=3):
     x, y = pos
@@ -19,11 +23,11 @@ def spaced(draw, pos, text, fnt, fill, sp=3):
 
 def grain(img, strength=0.15):
     random.seed(7)
-    g = img.copy(); px = g.load()
+    g = img.copy(); px = g.load(); src = img.load()
     for yy in range(H):
         for xx in range(W):
             v = random.randint(-8, 8)
-            r, gb, b = img.getpixel((xx, yy))
+            r, gb, b = src[xx, yy]
             px[xx, yy] = (max(0,min(255,r+v)), max(0,min(255,gb+v)), max(0,min(255,b+v)))
     return Image.blend(img, g, strength)
 
@@ -135,13 +139,13 @@ def s2():
 AMBIENTES = [
     # (num, label, bg_color, accent, headline_l1, headline_l2, copy_l1, copy_l2)
     (2, "DORMITORIO",   (18,20,28),    (100,115,160,200),
-     "DORMI-", "TORIO.", "Tu mesita de noche", "nunca tuvo tanto carácter."),
+     "CUARTO", "NOCTURNO.", "Tu mesita de noche", "nunca tuvo tanto carácter."),
     (3, "ESCRITORIO",   (24,16,8),     (160,96,74,200),
-     "ESCRI-",  "TORIO.", "Porque crear", "también se ilumina."),
+     "ESPACIO", "CREATIVO.", "Porque crear", "también se ilumina."),
     (4, "LECTURA",      (20,30,20),    (61,79,53,220),
      "RINCÓN", "LECTOR.", "Un rincón, una lámpara,", "mil historias."),
     (5, "TERRAZA",      (10,10,12),    (255,255,255,60),
-     "TERRA-",  "ZA.", "La noche afuera.", "La luz, tuya."),
+     "TERRAZA", "ILUMINADA.", "La noche afuera.", "La luz, tuya."),
 ]
 
 def make_graphic(n, label, bg, accent, h1, h2, c1, c2):
@@ -171,7 +175,7 @@ def make_graphic(n, label, bg, accent, h1, h2, c1, c2):
     d.text((M+20, H-247), c2, font=flgt, fill=WHITE_60)
 
     footer(d)
-    save(img, f"slide-0{n+2}-{label.lower()}")
+    save(img, f"slide-0{n+1}-{label.lower()}")
 
 # ── SLIDE 7 — CTA ────────────────────────────────────────────────────────────
 def s7():
